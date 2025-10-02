@@ -2,10 +2,8 @@ import cv2 as cv
 import numpy as np
 import os
 import re
-
 def natural_key(s):
     return [int(text) if text.isdigit() else text.lower() for text in re.split(r'(\d+)', s)]
-
 
 def load_images_from_folder(folder):
     images = {}
