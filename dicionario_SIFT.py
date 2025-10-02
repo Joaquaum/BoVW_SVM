@@ -17,7 +17,7 @@ def load_images_from_folder(folder):
         images[filename] = category
     return images
 
-images = load_images_from_folder(r'C:\Users\ppgmcs\Desktop\imagens tratadas - final')
+images = load_images_from_folder(r'imagens')
 
 def artefatos_sift(images):
     sift_vectors = {}
