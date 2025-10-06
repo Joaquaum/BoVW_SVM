@@ -17,7 +17,7 @@ def load_images_from_folder(folder):
         images[filename] = category
     return images
 
-images = load_images_from_folder(r'imagens')
+images = load_images_from_folder(r'datasets')
 
 def artefatos_sift(images):
     sift_vectors = {}
@@ -35,3 +35,9 @@ def artefatos_sift(images):
 sifts = artefatos_sift(images)
 lista_descritores = sifts[0]
 lista_features = sifts[1]
+
+np.savez("lista_sift.npz", lista_descritores=lista_descritores)
+
+data = np.load("lista_sift.npz")
+print(data)
+vocabulario = data["lista_descritores"]
